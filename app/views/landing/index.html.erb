@@ -1,18 +1,20 @@
 <h1>Conference Schedule</h1>
 
-<table id="events">
-  <tr>
-    <td>Start Time</td>
-    <td>End Time</td>
-    <td>Name</td>
-    <td>Track</td>
-  </tr>
-  <tr>
-    <% @events.all.each do |e| %>
-    <td><%= e.start_time %></td>
-    <td><%= e.end_time %></td>
-    <td><%= e.name %></td>
-    <td><%= e.track.name %></td>
+<div class="container">
+  <table id="events">
+    <tr>
+      <td>Start Time</td>
+      <td>End Time</td>
+      <td>Name</td>
+      <td>Track</td>
+    </tr>
+    <% @events.each do |e| %>
+    <tr>
+      <td><%= e.start_time %></td>
+      <td><%= e.end_time %></td>
+      <td><%= e.name %></td>
+      <td><%= e.track.name %></td>
+    </tr>
     <% end %>
-  </tr>
-</table>
+  </table>
+</div>
