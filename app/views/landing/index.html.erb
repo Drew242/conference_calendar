@@ -1,5 +1,11 @@
 <h1>Conference Schedule</h1>
 
+<% if "there is a next day" %>
+  <%= link_to "#{@next_day}'s events", next_day_path(@next_day) %>
+<% else %>
+  <p>"Boobs"</p>
+<% end %>
+
 <div class="container">
   <table id="events">
     <tr>
